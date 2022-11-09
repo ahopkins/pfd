@@ -38,12 +38,12 @@ jobs:
         include:
           - os: macos-latest
             TARGET: macos
-            CMD_BUILD: pyinstaller -D -n pfd ./src/runner.py
+            CMD_BUILD: pyinstaller --windowed -D -n pfd ./src/runner.py
             OUT_DIR: ./dist
             OUT_FILE_NAME: pfd-macos
           - os: windows-latest
             TARGET: windows
-            CMD_BUILD: pyinstaller -D -n pfd ./src/runner.py
+            CMD_BUILD: pyinstaller --windowed -D -n pfd ./src/runner.py
             OUT_DIR: ./dist
             OUT_FILE_NAME: pfd-windows
           - os: ubuntu-latest

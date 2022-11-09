@@ -1,6 +1,5 @@
 import os
 import sys
-from importlib import import_module
 from importlib.metadata import version
 from pathlib import Path
 from sys import platform
@@ -137,7 +136,7 @@ def check_config_location():
         print(f"Config directory (appdirs): {config_dir}")
 
     try:
-        path.mkdir(0o700)
+        path.mkdir(0o700, True, True)
     except Exception as e:
         print(f"Create config file: {BAD} ({e})")
     else:
